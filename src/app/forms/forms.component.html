@@ -1,20 +1,23 @@
+<form #acctForm="ngForm" (ngSubmit)="sendFormData(acctForm.value)"   class="">
+<label>Account Number :- </label>
 
-<form #accForm="ngForm" (ngSubmit)="sendFormData(accForm.value)" class="">
-<label>Account Number</label>
-<input type="number" id="accntno" input pattern=".{5,}" required title="5 characters minimum" name="accntno #acno="ngModel" ngModel required maxlength="5">
+<input type="number" id="accntno" input pattern=".{5,}" required title="5 characters minimum" 
+name="Account No" #accntno="ngModel"  ngModel>
 <span *ngIf="accntno.invalid && accntno.touched"> Invalid Account Number</span><br><br>
-<label>First Name  </label>
-<input type="text" name="FName" #FName="ngModel" ngModel ><br>
-<label>Amount</label>
-<input type="number" name="amnt" #amnt="ngModel" ngModel><br>
-<button type="submit">submit</button>
+<label>First Name  :-</label>
+<input type="text" name="FName" #FName="ngModel" input pattern=".{3,}" 
+required title="5 characters minimum" ngModel >
+<span *ngIf="FName.invalid && FName.touched"> Required 3 Characters </span><br><br>
+<label>Amount :-</label>
+<input type="number" name="amt" #amt="ngModel" ngModel><br><br>
+<button type="submit" class="btn  "> Submit </button>
 </form><br><br>
 
 
 
 <ul *ngFor="let v of item">
-<li > Accont Number : {{v.acno}}</li>
+<li > Accont Number : {{v.accntno}}</li>
 <li> First Name : {{v.FName}}</li>
-    <li> Amount :{{v.amnt}}</li>
-    <li><button class="btn  btn-primary" (click)="Deleteinfo(v)"> Delete</button></li>
+    <li> Amount :{{v.amt}}</li>
+    <li><button class="btn" (click)="Deleteinfo(v)"> Delete</button></li>
 </ul>
