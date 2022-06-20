@@ -1,7 +1,8 @@
 <form #acctForm="ngForm" (ngSubmit)="sendFormData(acctForm.value)"   class="">
-<label>Account Number :- </label>
 
-<input type="number" id="accntno" input pattern=".{5,}" required title="5 characters minimum" 
+
+ <label>Account Number :- </label>
+<input type="number" id="accntno" input pattern=".{5,}" required title="5 Numbers Minimum" 
 name="accntno" #accntno="ngModel"  ngModel>
 <span *ngIf="accntno.invalid && accntno.touched"> Invalid Account Number</span><br><br>
 <label>First Name  :-</label>
