@@ -2,7 +2,7 @@
 <label>Account Number :- </label>
 
 <input type="number" id="accntno" input pattern=".{5,}" required title="5 characters minimum" 
-name="Account No" #accntno="ngModel"  ngModel>
+name="accntno" #accntno="ngModel"  ngModel>
 <span *ngIf="accntno.invalid && accntno.touched"> Invalid Account Number</span><br><br>
 <label>First Name  :-</label>
 <input type="text" name="FName" #FName="ngModel" input pattern=".{3,}" 
