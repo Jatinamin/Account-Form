@@ -1,6 +1,6 @@
-<form #acctForm="ngForm" (ngSubmit)="sendFormData(acctForm.value)"   class="">
-<label>Account Number :- </label>
+<form #acctForm="ngForm" (ngSubmit)="sendFormData(acctForm.value)"  class="">
 
+<label>Account Number :- </label>
 <input type="number" id="accntno" input pattern=".{5,}" required title="5 characters minimum" 
 name="Account No" #accntno="ngModel"  ngModel>
 <span *ngIf="accntno.invalid && accntno.touched"> Invalid Account Number</span><br><br>
@@ -16,8 +16,8 @@ required title="5 characters minimum" ngModel >
 
 
 <ul *ngFor="let v of item">
-<li > Accont Number : {{v.accntno}}</li>
-<li> First Name : {{v.FName}}</li>
-    <li> Amount :{{v.amt}}</li>
+<li > Accont Number : {{v.accntno}} </li>
+<li> First Name : {{v.FName}} </li>
+    <li> Amount :{{v.amt}} </li>
     <li><button class="btn" (click)="Deleteinfo(v)"> Delete</button></li>
 </ul>
