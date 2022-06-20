@@ -1,0 +1,19 @@
+
+<form #pinalForm="ngForm" (ngSubmit)="sendFormData(pinalForm.value)" class="">
+<label>Account Number</label>
+<input type="number" name="acno" #acno="ngModel" ngModel required maxlength="5"><br>
+<label>First Name  </label>
+<input type="text" name="FName" #FName="ngModel" ngModel ><br>
+<label>Amount</label>
+<input type="number" name="amnt" #amnt="ngModel" ngModel><br>
+<button type="submit">submit</button>
+</form><br><br>
+
+
+
+<ul *ngFor="let v of item">
+<li > Accont Number : {{v.acno}}</li>
+<li> First Name : {{v.FName}}</li>
+    <li> Amount :{{v.amnt}}</li>
+    <li><button class="btn  btn-primary" (click)="Deleteinfo(v)"> Delete</button></li>
+</ul>
